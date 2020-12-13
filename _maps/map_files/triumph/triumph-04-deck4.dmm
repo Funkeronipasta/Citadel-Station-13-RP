@@ -2590,12 +2590,7 @@
 /turf/simulated/floor/tiled,
 /area/security/hallway)
 "bRn" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/structure/catwalk,
+/obj/machinery/floodlight,
 /turf/simulated/floor/plating,
 /area/maintenance/chapel)
 "bRA" = (
@@ -10304,11 +10299,6 @@
 /area/security/brig)
 "htU" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/structure/cable{
 	d1 = 1;
 	d2 = 8;
 	icon_state = "1-8"
@@ -12385,11 +12375,6 @@
 /area/triumph/station/explorer_medical)
 "iQv" = (
 /obj/machinery/door/firedoor,
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/plating,
 /area/maintenance/chapel)
@@ -14103,7 +14088,8 @@
 	tag_chamber_sensor = "expshuttle_sensor";
 	tag_exterior_door = "expshuttle_door_Ro";
 	tag_exterior_sensor = "expshuttle_exterior_sensor";
-	tag_interior_door = "expshuttle_door_Ri"
+	tag_interior_door = "expshuttle_door_Ri";
+	tag_interior_sensor = "expshuttle_interior_sensor"
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 8;
@@ -15956,7 +15942,6 @@
 	dir = 1;
 	use_power = 1
 	},
-/obj/machinery/telecomms/relay/preset/telecomms,
 /turf/simulated/floor/airless,
 /area/shuttle/civvie/cockpit)
 "lyF" = (
@@ -19668,11 +19653,6 @@
 /turf/simulated/floor/tiled,
 /area/triumph/station/explorer_medical)
 "oge" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /obj/structure/loot_pile/maint/trash,
 /obj/machinery/light/small/emergency{
 	dir = 1
@@ -22206,12 +22186,6 @@
 	frequency = 1380;
 	id_tag = "expshuttle_door_Ri"
 	},
-/obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1380;
-	master_tag = "expshuttle_docker";
-	pixel_x = -27
-	},
 /turf/simulated/floor/tiled,
 /area/shuttle/excursion/general)
 "pTM" = (
@@ -22748,14 +22722,16 @@
 /turf/simulated/floor/wood,
 /area/hydroponics/garden)
 "qgO" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
+/obj/machinery/airlock_sensor/airlock_exterior/shuttle{
+	command = "cycle_interior";
+	dir = 6;
+	frequency = 1380;
+	id_tag = "expshuttle_interior_sensor";
+	master_tag = "expshuttle_docker";
+	pixel_y = 27
 	},
-/obj/effect/floor_decal/rust/mono_rusted3,
-/turf/simulated/floor/plating,
-/area/maintenance/chapel)
+/turf/simulated/floor/tiled,
+/area/shuttle/excursion/general)
 "qgT" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/item/material/knife/machete,
@@ -24620,15 +24596,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/secondary/docking_hallway)
-"rpC" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/door/firedoor,
-/turf/simulated/floor/plating,
-/area/maintenance/chapel)
 "rqz" = (
 /obj/effect/floor_decal/corner/red/bordercorner2{
 	dir = 1
@@ -25370,9 +25337,6 @@
 	},
 /obj/machinery/recharger/wallcharger{
 	pixel_x = -24
-	},
-/obj/machinery/power/terminal{
-	dir = 4
 	},
 /obj/structure/cable/green,
 /turf/simulated/floor/tiled,
@@ -29766,11 +29730,6 @@
 /turf/simulated/floor/tiled,
 /area/triumph/station/explorer_entry)
 "uYV" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /obj/machinery/alarm{
 	frequency = 1441;
 	pixel_y = 22
@@ -31350,11 +31309,6 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/aft)
 "vZm" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /obj/machinery/light/small/emergency{
 	dir = 1
 	},
@@ -34270,22 +34224,6 @@
 /obj/machinery/alarm{
 	dir = 8;
 	pixel_x = 24
-	},
-/turf/simulated/floor/tiled/dark,
-/area/hallway/secondary/civilian_hallway_mid)
-"yfQ" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/effect/floor_decal/techfloor{
-	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/secondary/civilian_hallway_mid)
@@ -38061,7 +37999,7 @@ ieD
 tii
 kln
 hYe
-ieD
+qgO
 jxu
 eau
 kiY
@@ -44159,7 +44097,7 @@ kKQ
 kKQ
 lkb
 kKQ
-qgO
+gEf
 amB
 mIQ
 wdN
@@ -44301,7 +44239,7 @@ ttb
 ttb
 ttb
 ttb
-rpC
+nLj
 bOn
 mIQ
 lkW
@@ -44443,7 +44381,7 @@ aQn
 tCB
 oRN
 ttb
-xkZ
+kKQ
 amB
 mIQ
 pRU
@@ -44727,7 +44665,7 @@ rwy
 bvG
 vIh
 ttb
-xkZ
+kKQ
 amB
 mIQ
 bfm
@@ -44869,7 +44807,7 @@ lzU
 ukY
 vIh
 maF
-bRn
+amB
 amB
 mIQ
 xsj
@@ -45011,7 +44949,7 @@ vIh
 pAA
 vIh
 ttb
-nRa
+bRn
 hWf
 mIQ
 bXk
@@ -45153,7 +45091,7 @@ hLr
 pAA
 iEs
 ttb
-xkZ
+kKQ
 amB
 mIQ
 xIk
@@ -45579,7 +45517,7 @@ pfD
 pAA
 vIh
 ttb
-bRn
+amB
 kKQ
 mIQ
 fbm
@@ -45863,7 +45801,7 @@ nMr
 mCI
 nMr
 xtN
-yfQ
+nMr
 obh
 ldg
 trz
